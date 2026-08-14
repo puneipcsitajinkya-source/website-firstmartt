@@ -131,3 +131,86 @@ export function localBusinessSchema() {
     },
   };
 }
+
+export function locationLocalBusinessSchema(location: {
+  name: string;
+  description: string;
+  slug: string;
+  serviceAreas: { type: "State" | "City"; name: string }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: `${siteConfig.name} - ${location.name}`,
+    description: location.description,
+    url: `${siteConfig.url}/locations/${location.slug}`,
+    email: siteConfig.contact.email,
+    telephone: contactPhone.e164,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: location.name,
+      addressRegion: location.name,
+      addressCountry: siteConfig.contact.address.addressCountry,
+    },
+    areaServed: location.serviceAreas.map((area) => ({
+      "@type": area.type === "State" ? "AdministrativeArea" : "City",
+      name: area.name,
+    })),
+  };
+}
+
+export function personSchema(person?: {
+  name?: string;
+  role?: string;
+  bio?: string;
+}) {
+  const p = person ?? siteConfig.founder;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: p.name ?? siteConfig.founder.name,
+    jobTitle: p.role ?? siteConfig.founder.role,
+    description: p.bio ?? siteConfig.founder.bio,
+    worksFor: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    sameAs: [siteConfig.social.linkedin],
+  };
+}
+
+export function webPageSchema(page: {
+  name: string;
+  description: string;
+  path: string;
+  datePublished?: string;
+  dateModified?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: page.name,
+    description: page.description,
+    url: `${siteConfig.url}${page.path}`,
+    isPartOf: {
+      "@type": "WebSite",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteConfig.url}/logo.png`,
+      },
+    },
+    ...(page.datePublished && { datePublished: page.datePublished }),
+    ...(page.dateModified && { dateModified: page.dateModified }),
+    inLanguage: siteConfig.language,
+  };
+}
+
+

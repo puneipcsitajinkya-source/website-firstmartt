@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts, getAllSlugs } from "@/lib/blog";
 import { siteConfig } from "@/lib/site-config";
+import { locations } from "@/lib/locations";
 
 const staticPages = [
   "",
@@ -14,6 +15,13 @@ const staticPages = [
   "/for-local-businesses",
   "/for-delivery-partners",
   "/investment",
+  "/investors",
+  "/market",
+  "/traction",
+  "/unit-economics",
+  "/competitive-landscape",
+  "/investors/faq-international",
+  "/global",
   "/business-model",
   "/roadmap",
   "/founder",
@@ -23,6 +31,8 @@ const staticPages = [
   "/privacy",
   "/terms",
   "/blog",
+  "/research",
+  "/locations",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -32,7 +42,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}${path}`,
     lastModified: new Date(),
     changeFrequency: path === "" ? "weekly" : "monthly",
-    priority: path === "" ? 1 : path === "/investment" || path === "/blog" ? 0.9 : 0.8,
+    priority:
+      path === ""
+        ? 1
+        : path === "/investment" || path === "/blog" || path === "/global" || path === "/investors" || path === "/market"
+        ? 0.9
+        : path === "/locations" || path === "/traction" || path === "/unit-economics" || path === "/competitive-landscape" || path === "/investors/faq-international"
+        ? 0.85
+        : 0.8,
   }));
 
   const blogEntries: MetadataRoute.Sitemap = getAllSlugs().map((slug) => {
@@ -45,5 +62,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  return [...staticEntries, ...blogEntries];
+  const locationEntries: MetadataRoute.Sitemap = locations.map((loc) => ({
+    url: `${baseUrl}/locations/${loc.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.85,
+  }));
+
+  return [...staticEntries, ...blogEntries, ...locationEntries];
 }

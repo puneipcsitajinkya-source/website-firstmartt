@@ -9,6 +9,8 @@ export const siteConfig = {
   founder: {
     name: "FirstMartt Team",
     role: "Founders",
+    /** Brief bio for Person schema and founder authority pages */
+    bio: "Building India's hyperlocal commerce infrastructure to empower local businesses, merchants, and communities through technology.",
   },
   contact: {
     email: "firstmartsindia@gmail.com",
@@ -34,9 +36,21 @@ export const siteConfig = {
     twitter: "@firstmartt",
     linkedin: "https://linkedin.com/company/firstmartt",
   },
+  /** Analytics & verification IDs (loaded from environment variables) */
+  analytics: {
+    gaId: process.env.NEXT_PUBLIC_GA_ID ?? "",
+    gscVerification: process.env.GOOGLE_SITE_VERIFICATION ?? "",
+    bingVerification: process.env.BING_SITE_VERIFICATION ?? "",
+  },
   keywords: [
+    // Brand keywords (Tier A)
     "FirstMartt",
     "FirstMartt India",
+    "FirstMartt startup",
+    "FirstMartt investment",
+    "FirstMartt funding",
+    "FirstMartt business model",
+    // Commercial / Investor keywords (Tier B — Indian)
     "Hyperlocal Commerce Startup",
     "Hyperlocal Marketplace India",
     "Local Commerce Platform",
@@ -54,6 +68,28 @@ export const siteConfig = {
     "Venture Capital Startup",
     "Marketplace Startup",
     "Ecommerce Startup India",
+    "Indian hyperlocal commerce startup",
+    "hyperlocal commerce platform India",
+    "Indian ecommerce startup investment",
+    "hyperlocal startup investment",
+    "Indian startup investment opportunity",
+    "Indian retail technology startup",
+    "local business digitalization India",
+    // Commercial / Investor keywords (Tier B — Foreign/International)
+    "invest in Indian startups",
+    "India ecommerce investment",
+    "FDI India ecommerce",
+    "NRI investment Indian startups",
+    "foreign investment Indian retail tech",
+    "India market entry ecommerce",
+    "India startup investment opportunity",
+    // Informational keywords (Tier C)
+    "what is hyperlocal commerce",
+    "future of hyperlocal commerce in India",
+    "hyperlocal commerce business model",
+    "Tier-2 city ecommerce India",
+    "Tier-3 city commerce India",
+    "local merchant marketplace",
   ],
 } as const;
 
@@ -62,7 +98,7 @@ export const navLinks = [
   { href: "/about", label: "About" },
   { href: "/why-firstmartt", label: "Why FirstMartt" },
   { href: "/solutions", label: "Solutions" },
-  { href: "/investment", label: "Investment" },
+  { href: "/investors", label: "Investors" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ] as const;
@@ -86,7 +122,13 @@ export const footerLinks = {
     { href: "/roadmap", label: "Roadmap" },
   ],
   investors: [
+    { href: "/investors", label: "Investor Hub" },
     { href: "/investment", label: "Investment Opportunity" },
+    { href: "/market", label: "Market Opportunity" },
+    { href: "/traction", label: "Traction & Metrics" },
+    { href: "/unit-economics", label: "Unit Economics" },
+    { href: "/competitive-landscape", label: "Competitive Landscape" },
+    { href: "/investors/faq-international", label: "International Investor FAQ" },
     { href: "/faq", label: "FAQ" },
     { href: "/blog", label: "Blog" },
   ],
@@ -96,4 +138,5 @@ export const footerLinks = {
     { href: "/contact", label: "Contact" },
   ],
 } as const;
+
 

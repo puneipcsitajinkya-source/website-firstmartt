@@ -28,6 +28,14 @@ export function createMetadata({
   const fullTitle =
     path === "/" ? `${siteConfig.name} | ${siteConfig.tagline}` : `${title} | ${siteConfig.name}`;
 
+  const verification: Record<string, string> = {};
+  if (siteConfig.analytics.gscVerification) {
+    verification.google = siteConfig.analytics.gscVerification;
+  }
+  if (siteConfig.analytics.bingVerification) {
+    verification.other = siteConfig.analytics.bingVerification;
+  }
+
   return {
     title: fullTitle,
     description,
@@ -36,6 +44,7 @@ export function createMetadata({
     creator: siteConfig.name,
     publisher: siteConfig.name,
     metadataBase: new URL(siteConfig.url),
+    ...(Object.keys(verification).length > 0 && { verification }),
     alternates: {
       canonical: url,
       types: {

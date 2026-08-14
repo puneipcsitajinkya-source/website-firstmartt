@@ -33,8 +33,8 @@ export function CTA({
           prefersReducedMotion
             ? {}
             : {
-                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-              }
+              backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+            }
         }
         transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
         style={{

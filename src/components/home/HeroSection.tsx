@@ -3,15 +3,17 @@
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { easePremium } from "@/lib/motion";
-import { FloatingOrbs } from "@/components/motion/FloatingOrbs";
 import { siteConfig } from "@/lib/site-config";
 
-const trustPoints = [
-  "Pre-Seed Stage",
-  "15-Min Delivery",
-  "AI-Powered Platform",
-];
+/* ═══════════════════════════════════════════════════════════
+   3-D BACKGROUND LAYER — sits behind all text
+   Professional rotating rings, floating shapes, glowing orbs
+═══════════════════════════════════════════════════════════ */
 
+
+/* ═══════════════════════════════════════════════════════════
+   HERO SECTION — Text on top, 3-D background behind
+═══════════════════════════════════════════════════════════ */
 export function HeroSection() {
   const prefersReducedMotion = useReducedMotion();
 
@@ -35,11 +37,33 @@ export function HeroSection() {
   const MotionWrapper = prefersReducedMotion ? "div" : motion.div;
 
   return (
-    <section className="premium-mesh relative overflow-hidden border-b border-violet-100/80 bg-gradient-to-b from-white via-violet-50/30 to-white">
-      <FloatingOrbs />
-      <div className="premium-grid pointer-events-none absolute inset-0" aria-hidden="true" />
+    <section
+      className="relative overflow-hidden border-b"
+      style={{
+        background:
+          "linear-gradient(175deg, #ffffff 0%, #f5f3ff 18%, #e0f2fe 42%, #f0f9ff 62%, #faf5ff 82%, #ffffff 100%)",
+        borderColor: "rgba(56,189,248,0.2)",
+        minHeight: "620px",
+      }}
+    >
+      {/* Subtle grid overlay */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        aria-hidden="true"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(124,58,237,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(56,189,248,0.035) 1px, transparent 1px)",
+          backgroundSize: "56px 56px",
+          maskImage:
+            "radial-gradient(ellipse 80% 70% at 50% 40%, black 20%, transparent 100%)",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 80% 70% at 50% 40%, black 20%, transparent 100%)",
+        }}
+      />
 
-      <div className="relative mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+
+      {/* Text content — ON TOP */}
+      <div className="relative z-10 mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <MotionWrapper
           className="text-center"
           {...(!prefersReducedMotion && {
@@ -58,21 +82,11 @@ export function HeroSection() {
             </>
           ) : (
             <>
-              <motion.div variants={item}>
-                <HeroBadge />
-              </motion.div>
-              <motion.div variants={item}>
-                <HeroTitle />
-              </motion.div>
-              <motion.div variants={item}>
-                <HeroDescription />
-              </motion.div>
-              <motion.div variants={item}>
-                <HeroButtons />
-              </motion.div>
-              <motion.div variants={item}>
-                <TrustPoints />
-              </motion.div>
+              <motion.div variants={item}><HeroBadge /></motion.div>
+              <motion.div variants={item}><HeroTitle /></motion.div>
+              <motion.div variants={item}><HeroDescription /></motion.div>
+              <motion.div variants={item}><HeroButtons /></motion.div>
+              <motion.div variants={item}><TrustPoints /></motion.div>
             </>
           )}
         </MotionWrapper>
@@ -80,6 +94,8 @@ export function HeroSection() {
     </section>
   );
 }
+
+/* ── Sub-components (unchanged text/layout) ──────────────── */
 
 function HeroBadge() {
   return (
@@ -145,12 +161,22 @@ function HeroButtons() {
 function TrustPoints() {
   return (
     <ul className="mt-12 flex flex-wrap items-center justify-center gap-3">
-      {trustPoints.map((point) => (
+      {[
+        { icon: "⚡", text: "Pre-Seed Stage" },
+        { icon: "🚀", text: "15-Min Delivery" },
+        { icon: "🧠", text: "AI-Powered Platform" },
+      ].map((point) => (
         <li
-          key={point}
-          className="rounded-full border border-violet-200/70 bg-white/80 px-4 py-2 text-sm font-medium text-slate-700 shadow-sm backdrop-blur-sm"
+          key={point.text}
+          className="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-slate-700 shadow-sm backdrop-blur-sm"
+          style={{
+            border: "1px solid rgba(56,189,248,0.3)",
+            background:
+              "linear-gradient(135deg, rgba(255,255,255,0.92), rgba(240,249,255,0.9))",
+          }}
         >
-          {point}
+          <span>{point.icon}</span>
+          {point.text}
         </li>
       ))}
     </ul>

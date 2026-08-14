@@ -4,16 +4,22 @@ import { PageHeader } from "@/components/PageHeader";
 import { JsonLd } from "@/components/JsonLd";
 import { createMetadata } from "@/lib/seo";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
-import { FAQAccordion } from "@/components/FAQAccordion";
-import { faqs } from "@/lib/faq";
 import { siteConfig } from "@/lib/site-config";
+import { faqs } from "@/lib/faq";
+import { FAQTabs } from "@/components/FAQTabs";
 
 export const metadata: Metadata = createMetadata({
   title: "Frequently Asked Questions",
   description:
-    "Frequently asked questions about FirstMartt, our hyperlocal commerce platform, investment opportunity, and services for local businesses in India.",
+    "Frequently asked questions about FirstMartt for investors, merchants, and customers — covering our hyperlocal commerce platform, investment opportunity, FDI, and services in India.",
   path: "/faq",
-  keywords: ["FirstMartt FAQ", "Startup for Investors", "Hyperlocal Marketplace India"],
+  keywords: [
+    "FirstMartt FAQ",
+    "Startup for Investors",
+    "Hyperlocal Marketplace India",
+    "Indian Startup Investment FAQ",
+    "International Investor FAQ India",
+  ],
 });
 
 export default function FAQPage() {
@@ -30,11 +36,11 @@ export default function FAQPage() {
       />
       <PageHeader
         title="Frequently Asked Questions"
-        description="Answers to common questions about FirstMartt, our platform, investment opportunity, and partnership options."
+        description="Answers to common questions about FirstMartt — organized for investors, merchants, and customers."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "FAQ" }]}
       />
       <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-        <FAQAccordion items={faqs} />
+        <FAQTabs />
       </section>
       <CTA />
     </>
