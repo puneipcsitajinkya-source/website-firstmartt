@@ -4,24 +4,47 @@ import { MarkdownContent, Prose } from "@/components/Prose";
 import { PageHeader } from "@/components/PageHeader";
 import { JsonLd } from "@/components/JsonLd";
 import { createMetadata } from "@/lib/seo";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = createMetadata({
-  title: "For Delivery Partners | Earn with FirstMartt",
+  title: "Delivery Partner Jobs & Flexible Earnings | FirstMartt Fleet",
   description:
-    "Join FirstMartt as a delivery partner. Enjoy flexible working hours, transparent earnings, and advanced hyperlocal routing technology.",
+    "Join FirstMartt as a hyperlocal delivery partner. Earn up to ₹25,000–₹35,000/month with flexible hours, short 2-4 km delivery radius, and weekly payouts.",
   path: "/for-delivery-partners",
   keywords: [
     "Delivery Partner Job India",
     "Hyperlocal Delivery Driver",
     "Earn Money Delivery Boy",
     "Flexible Delivery Jobs",
-    "FirstMartt Partners",
+    "Delivery Rider Job Maharashtra",
+    "Quick commerce delivery partner",
+    "Gig economy delivery rider India",
+    "Short distance delivery job",
+    "EV delivery driver partner",
     "Hyperlocal delivery platform India",
     "Quick commerce Tier 2 Tier 3 India",
+    "On-demand intra-city delivery platform",
   ],
 });
+
+const deliveryFaqs = [
+  {
+    question: "What are the requirements to become a FirstMartt Delivery Partner?",
+    answer:
+      "You must be 18+ years old, possess a valid Aadhaar Card, PAN Card, a two-wheeler (bike/scooter/EV) with Driving License and RC (or a bicycle for short distances), and a smartphone with an active internet connection.",
+  },
+  {
+    question: "How much can I earn delivering with FirstMartt?",
+    answer:
+      "FirstMartt riders earn a base fare per order plus per-kilometer distance compensation, surge pay during peak hours, and milestone incentives. Full-time partners earn between ₹20,000 to ₹35,000 per month with transparent weekly bank deposits.",
+  },
+  {
+    question: "How long are the delivery distances?",
+    answer:
+      "FirstMartt specializes in hyperlocal neighbourhood deliveries with typical trip distances between 1.5 km and 4 km, meaning less fatigue and lower fuel consumption compared to long-distance food delivery.",
+  },
+];
 
 export default function ForDeliveryPartnersPage() {
   const breadcrumbs = [
@@ -31,10 +54,10 @@ export default function ForDeliveryPartnersPage() {
 
   return (
     <>
-      <JsonLd data={breadcrumbSchema(breadcrumbs)} />
+      <JsonLd data={[breadcrumbSchema(breadcrumbs), faqSchema(deliveryFaqs)]} />
       <PageHeader
-        title="For Delivery Partners"
-        description="Earn money on your own schedule. Join FirstMartt's hyperlocal delivery network and support local businesses in your city."
+        title="Delivery Partner Fleet — Flexible Hours & Reliable Earnings"
+        description="Deliver for local stores in your neighbourhood. Short travel distances (2–4 km), weekly bank payouts, and performance incentives."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "For Delivery Partners" },
@@ -43,37 +66,41 @@ export default function ForDeliveryPartnersPage() {
       <Prose>
         <MarkdownContent
           content={`
-Become an essential link in neighborhood commerce. As a FirstMartt delivery partner, you connect nearby stores with customers, ensuring secure and rapid last-mile fulfillment.
+Become an essential logistics backbone for your city's local economy. As a **FirstMartt Delivery Partner**, you connect neighbourhood stores with nearby customers, earning reliable income on your own schedule.
 
-## Why Deliver with FirstMartt?
+## 💰 Transparent Pay & Earning Benefits
 
 We prioritize driver safety, fair compensation, and operational convenience:
-- **Work on Your Schedule:** Log on and deliver whenever you choose.
-- **Transparent and Fair Pay:** Earn per delivery with bonuses for peak hours.
-- **Localized Delivery Zones:** Short travel distances keep you close to your home base.
-- **Support Neighborhood Shops:** Help local merchants deliver products to their community.
+- **Flexible Working Hours:** Choose full-time, part-time, or weekend shifts that fit your lifestyle.
+- **Short Hyperlocal Trips (1.5 – 4 km):** No exhausting 15 km rides. Deliver within compact neighbourhood clusters to save on fuel and bike wear-and-tear.
+- **Weekly Direct Bank Payouts:** Every rupee you earn is deposited directly into your bank account with complete trip breakdown transparency.
+- **Surge & Festival Incentives:** Earn bonus compensation during evening peak hours, rainy weather, and local festive shopping seasons.
+- **EV Friendly Network:** Compatible with electric two-wheelers for near-zero daily fuel running costs.
 
-## Powered by Smart Logistics Technology
+---
 
-Our delivery driver application simplifies operations:
-- **Hyperlocal Route Optimization:** Navigate using the fastest turn-by-turn routes.
-- **Express Dispatching:** Spend less time waiting at stores and more time earning.
-- **Direct Digital Cashouts:** Track earnings in real-time with transparent weekly payouts.
+## 📱 Powered by Smart AI Logistics Technology
 
-## How to Join
+The FirstMartt Driver App makes deliveries seamless:
+- **Automated Route Optimization:** Real-time turn-by-turn navigation avoiding traffic hotspots.
+- **Zero Idle Wait Times:** Pre-packed merchant orders ensure you pick up and depart within 60–90 seconds of arriving at the store.
+- **Earnings & Tips Tracker:** Monitor your daily trips, earnings, customer tips, and bonus milestones in real-time.
 
-Getting started is simple and quick:
-1. **Submit Application:** Contact our onboarding team through the web form.
-2. **Document Check:** Bring your vehicle registration, driving license, and identity proofs.
-3. **Download Partner App:** Get trained, set up your profile, and start accepting deliveries.
+---
+
+## 📋 Easy 3-Step Onboarding Process
+
+1. **Submit Application:** Fill out the quick online partner form or contact our district hub on WhatsApp.
+2. **Document Verification:** Upload your Aadhaar Card, PAN Card, Driving License, and Bank Details.
+3. **Training & App Activation:** Complete a 15-minute digital briefing, collect your delivery kit, and start receiving delivery requests immediately.
           `.trim()}
         />
       </Prose>
       <CTA 
-        title="Join Our Delivery Fleet"
-        description="Start earning with FirstMartt. Connect with our partner onboarding team today."
+        title="Join the FirstMartt Delivery Fleet"
+        description="Start earning in your city with flexible hours and competitive weekly payouts."
         primaryHref="/contact"
-        primaryLabel="Apply to Deliver"
+        primaryLabel="Apply as Delivery Partner"
       />
     </>
   );

@@ -26,7 +26,7 @@ A comprehensive technical, architectural, and operational documentation for the 
 
 - **Brand Name**: FirstMartt
 - **Tagline**: India's Hyperlocal Commerce Platform for Local Businesses
-- **Base URL**: `https://firstmartt.com`
+- **Base URL**: `https://www.firstmartt.com`
 - **Contact Email**: `firstmartsindia@gmail.com`
 - **Headquarters / Registered Region**: Yavatmal, Maharashtra, India (PIN: 445301)
 

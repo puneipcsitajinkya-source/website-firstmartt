@@ -7,18 +7,21 @@ import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = createMetadata({
-  title: "Hyperlocal Commerce Competitive Landscape India",
+  title: "Competitive Landscape — FirstMartt vs Dark-Store Quick Commerce | India",
   description:
-    "Understand India's hyperlocal commerce competitive landscape. See how FirstMartt's merchant-first model compares to dark-store quick commerce and large aggregator platforms.",
+    "Compare FirstMartt's collaborative merchant mesh against dark-store quick commerce and centralized aggregators. Discover our capital-efficient moat in Tier-2/3 Bharat.",
   path: "/competitive-landscape",
   keywords: [
     "Hyperlocal Commerce Competition India",
     "Quick Commerce vs Local Commerce",
+    "Quick commerce without dark stores",
+    "Dark store model vs local merchant network",
     "Indian Hyperlocal Startups",
     "FirstMartt vs Quick Commerce",
     "Hyperlocal Marketplace Comparison",
     "Multi vendor marketplace vs single vendor",
     "AI in local retail supply chain India",
+    "Kirana store digital platform",
   ],
 });
 

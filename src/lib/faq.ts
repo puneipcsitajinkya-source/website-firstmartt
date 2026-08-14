@@ -28,21 +28,27 @@ export const faqs: FAQItem[] = [
     category: "general",
   },
   {
+    question: "How does FirstMartt enable quick commerce without dark stores?",
+    answer:
+      "FirstMartt turns existing neighbourhood retail and Kirana stores into distributed fulfillment micro-hubs. Instead of burning capital on warehouse leases and inventory, our AI platform digitizes local store shelves and routes nearby couriers for 15-30 minute deliveries with positive contribution margins.",
+    category: "general",
+  },
+  {
     question: "What makes FirstMartt different from other marketplaces?",
     answer:
-      "FirstMartt takes a merchant-first approach, empowering local stores with digital tools while preserving community commerce authenticity. Our platform focuses on neighbourhood inventory and sustainable unit economics rather than pure aggregation.",
+      "FirstMartt takes a merchant-first approach, empowering local stores with digital tools, WhatsApp ordering, and zero capex while preserving community commerce authenticity. Our platform focuses on neighbourhood inventory and sustainable unit economics rather than pure aggregator burn.",
     category: "general",
   },
   {
     question: "Which markets does FirstMartt serve?",
     answer:
-      "FirstMartt is focused on India, starting with pilot city markets in Maharashtra and expanding to additional urban and semi-urban regions. Our platform is designed for India's unique local retail landscape, especially Tier-2 and Tier-3 cities.",
+      "FirstMartt is focused on India, starting with pilot city markets in Maharashtra (including Yavatmal, Nagpur, Amravati, Pune, Mumbai) and expanding to Tier-2 and Tier-3 Bharat. Our platform is tailored specifically for India's unique unorganized retail landscape.",
     category: "general",
   },
   {
     question: "What technology does FirstMartt use?",
     answer:
-      "FirstMartt leverages modern cloud infrastructure, AI-powered commerce tools, mobile-first design, and integrated payment and logistics systems to deliver a seamless hyperlocal marketplace experience.",
+      "FirstMartt leverages modern edge cloud infrastructure, AI-powered cataloging, WhatsApp ordering integration, and real-time vehicle dispatch algorithms to deliver a seamless hyperlocal marketplace experience.",
     category: "general",
   },
   {

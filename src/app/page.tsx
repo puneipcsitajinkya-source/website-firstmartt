@@ -10,7 +10,7 @@ import {
 import { HeroSection } from "@/components/home/HeroSection";
 import { localBusinessSchema, faqSchema } from "@/lib/schema";
 
-/** Direct-answer FAQ for AI search / featured snippets (Section 16 of SEO plan) */
+/** Direct-answer FAQ for AI search / featured snippets */
 const directAnswerFaqs = [
   {
     question: "What is FirstMartt?",
@@ -18,9 +18,14 @@ const directAnswerFaqs = [
       "FirstMartt is an AI-powered hyperlocal marketplace startup in India connecting local businesses, merchants, and customers through a multi-vendor digital commerce platform. We digitize neighbourhood retail stores, enabling 15-30 minute local deliveries without dark-store infrastructure.",
   },
   {
+    question: "How does FirstMartt deliver in 15-30 minutes without dark stores?",
+    answer:
+      "FirstMartt uses a distributed merchant mesh network. By digitizing existing neighbourhood Kiranas and retail stores, nearby couriers pick up pre-packed orders directly from local shop shelves and deliver within 2 to 4 km in 15-30 minutes with zero warehouse capex.",
+  },
+  {
     question: "What problem does FirstMartt solve?",
     answer:
-      "Over 90% of India's retail commerce is unorganized, operated by neighbourhood MSMEs who lack digital tools. FirstMartt bridges this gap by giving local merchants digital storefronts, automated catalogs, and shared delivery networks — so they can compete with large e-commerce platforms.",
+      "Over 90% of India's retail commerce is unorganized, operated by neighbourhood MSMEs who lack digital tools. FirstMartt bridges this gap by giving local merchants digital storefronts, automated catalogs, WhatsApp ordering, and shared delivery networks — so they can compete with large e-commerce platforms.",
   },
   {
     question: "How does FirstMartt make money?",
@@ -30,7 +35,7 @@ const directAnswerFaqs = [
   {
     question: "Where does FirstMartt operate?",
     answer:
-      "FirstMartt is headquartered in Yavatmal, Maharashtra, India. We are focused on India's Tier-2 and Tier-3 cities, starting with Maharashtra and expanding to adjacent states.",
+      "FirstMartt is headquartered in Yavatmal, Maharashtra, India. We are focused on India's Tier-2 and Tier-3 cities, starting with Maharashtra (including Yavatmal, Nagpur, Amravati, Pune, Mumbai) and expanding across Bharat.",
   },
   {
     question: "What is the investment opportunity?",

@@ -3,7 +3,7 @@ export const siteConfig = {
   tagline: "India's Hyperlocal Commerce Platform for Local Businesses",
   description:
     "FirstMartt is an AI-powered hyperlocal marketplace startup in India connecting local businesses, merchants, and customers through a multi-vendor digital commerce platform.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://firstmartt.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.firstmartt.com",
   locale: "en_IN",
   language: "en",
   founder: {
@@ -54,7 +54,7 @@ export const siteConfig = {
     "FirstMartt app",
     "FirstMartt founders",
     "FirstMartt Yavatmal",
-    // Business & Marketplace keywords (Tier B)
+    // Business & Marketplace keywords (Tier B - Competitor & Market-Aligned)
     "Hyperlocal Commerce Startup",
     "Hyperlocal Marketplace India",
     "Local Commerce Platform",
@@ -64,18 +64,24 @@ export const siteConfig = {
     "Local merchant digitalization India",
     "Kirana store digital platform",
     "Quick commerce Tier 2 Tier 3 India",
+    "Quick commerce without dark stores",
     "AI Commerce Startup India",
     "Retail Technology Startup",
     "Hyperlocal delivery platform India",
     "Neighbourhood store ecommerce",
     "Online marketplace for local shops",
     "Digitize local retail India",
+    "Kirana e-commerce app",
+    "Phygital retail platform India",
+    "Kirana WhatsApp ordering system",
+    "Digital storefront for local shops",
+    "MSME retail digitization India",
     "Marketplace Startup",
     "Ecommerce Startup India",
     "Indian hyperlocal commerce startup",
     "hyperlocal commerce platform India",
     "local business digitalization India",
-    // Investor & Funding keywords (Tier B — Indian)
+    // Investor & Funding keywords (Tier B — Indian Angels & VCs)
     "Startup Seeking Investment India",
     "Startup Investment Opportunity",
     "Invest in Indian Startup",
@@ -87,12 +93,13 @@ export const siteConfig = {
     "Hyperlocal Startup Investment",
     "Indian Retail Technology Startup",
     "Invest in Indian Tech Startups",
+    "Retail tech angel investment India",
     "Indian Startup",
     "Indian startup investment opportunity",
     "Indian ecommerce startup investment",
     "hyperlocal startup investment",
     "Indian retail technology startup",
-    // Investor & Funding keywords (Tier B — Foreign/International)
+    // Investor & Funding keywords (Tier B — Foreign/NRI/FDI)
     "FDI India ecommerce",
     "NRI investment Indian startups",
     "foreign investment Indian retail tech",
@@ -108,7 +115,7 @@ export const siteConfig = {
     "Vidarbha startup ecosystem",
     "Maharashtra retail tech startup",
     "Hyperlocal shopping Maharashtra",
-    // Informational & Long-Tail keywords (Tier C)
+    // Informational & High-Intent Long-Tail queries (Tier C)
     "what is hyperlocal commerce",
     "future of hyperlocal commerce in India",
     "hyperlocal commerce business model",
@@ -117,6 +124,7 @@ export const siteConfig = {
     "Why Tier 2 and Tier 3 cities are the future of Indian ecommerce",
     "Multi vendor marketplace vs single vendor",
     "AI in local retail supply chain India",
+    "Dark store model vs local merchant network",
     "Tier-2 city ecommerce India",
     "Tier-3 city commerce India",
     "local merchant marketplace",

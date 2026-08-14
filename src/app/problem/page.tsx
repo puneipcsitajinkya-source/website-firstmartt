@@ -8,11 +8,20 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = createMetadata({
-  title: "Problem We Solve",
+  title: "Why India's Kirana Stores Need Digital Infrastructure | FirstMartt",
   description:
-    "FirstMartt addresses the digital gap facing India's local businesses—lack of online presence, fragmented tools, and competition from large ecommerce platforms.",
+    "Explore the digital divide facing 60M+ Indian MSME retail stores — dark-store competition, fragmented technology, and how FirstMartt solves it with collaborative local commerce.",
   path: "/problem",
-  keywords: ["Local Business Marketplace", "Digital Transformation", "Hyperlocal Delivery Platform", "How local merchants can sell online in India", "Online marketplace for local shops", "Kirana store digital platform"],
+  keywords: [
+    "Local Business Marketplace",
+    "Digital Transformation",
+    "Hyperlocal Delivery Platform",
+    "How local merchants can sell online in India",
+    "Online marketplace for local shops",
+    "Kirana store digital platform",
+    "Quick commerce without dark stores",
+    "Dark store model vs local merchant network",
+  ],
 });
 
 export default function ProblemPage() {

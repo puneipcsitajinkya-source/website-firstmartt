@@ -4,14 +4,14 @@ import { CTA } from "@/components/CTA";
 import { PageHeader } from "@/components/PageHeader";
 import { JsonLd } from "@/components/JsonLd";
 import { createMetadata } from "@/lib/seo";
-import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import { breadcrumbSchema, webPageSchema, faqSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 import { contactPhone } from "@/lib/contact";
 
 export const metadata: Metadata = createMetadata({
-  title: "FirstMartt Investment Opportunity | Indian Hyperlocal Commerce Startup",
+  title: "FirstMartt Investment Opportunity | Pre-Seed Retail Tech Startup India",
   description:
-    "Explore FirstMartt's pre-seed investment opportunity. Hyperlocal commerce platform for India's 60M+ local merchants — market opportunity, business model, traction, and unit economics.",
+    "Explore FirstMartt's pre-seed investment memo. Capital-efficient hyperlocal commerce platform for India's 60M+ local Kiranas — TAM, unit economics, and thesis.",
   path: "/investment",
   keywords: [
     "Startup Investment Opportunity",
@@ -32,8 +32,28 @@ export const metadata: Metadata = createMetadata({
     "FDI India ecommerce",
     "Hyperlocal Startup Investment",
     "Indian Ecommerce Startup Investment",
+    "Retail tech angel investment India",
+    "Quick commerce without dark stores",
   ],
 });
+
+const investmentFaqs = [
+  {
+    question: "What is FirstMartt's core investment thesis?",
+    answer:
+      "FirstMartt unlocks India's $1.3T retail opportunity by digitizing 60M+ neighbourhood Kirana stores with zero capex, capturing high-frequency hyper-local orders with positive Contribution Margin 3 (CM3) unit economics rather than loss-making dark store warehouses.",
+  },
+  {
+    question: "What funding stage is FirstMartt currently in?",
+    answer:
+      "FirstMartt is in its Pre-Seed / Angel round, inviting angel investors, family offices, micro-VCs, and strategic retail-tech funds.",
+  },
+  {
+    question: "Can NRI or foreign investors invest in FirstMartt?",
+    answer:
+      "Yes. FirstMartt complies with Indian FDI norms and offers streamlined cross-border investment frameworks for NRI and foreign institutional investors.",
+  },
+];
 
 export default function InvestmentPage() {
   const breadcrumbs = [
@@ -47,6 +67,7 @@ export default function InvestmentPage() {
       <JsonLd
         data={[
           breadcrumbSchema(breadcrumbs),
+          faqSchema(investmentFaqs),
           webPageSchema({
             name: "FirstMartt Investment Opportunity",
             description:

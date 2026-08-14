@@ -4,25 +4,47 @@ import { MarkdownContent, Prose } from "@/components/Prose";
 import { PageHeader } from "@/components/PageHeader";
 import { JsonLd } from "@/components/JsonLd";
 import { createMetadata } from "@/lib/seo";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = createMetadata({
-  title: "For Customers | Shop Trusted Local Stores Online",
+  title: "Shop Local Stores Online — 15 to 30 Min Delivery | FirstMartt",
   description:
-    "FirstMartt connects you with your favorite neighborhood shops. Shop groceries, pharmacy, electronics, and fashion from multiple local stores under one platform.",
+    "Order groceries, pharmacy, electronics, and daily essentials from trusted neighbourhood shops with 15–30 minute local delivery on FirstMartt. Support local retail with digital ease.",
   path: "/for-customers",
   keywords: [
     "Shop Local Online",
+    "Neighbourhood shopping app",
+    "Buy from local stores online",
     "Local Stores Marketplace",
     "15-Minute Delivery India",
     "Hyperlocal Grocery Delivery",
+    "Quick commerce without dark stores",
     "FirstMartt Customers",
     "Neighbourhood store ecommerce",
     "Hyperlocal shopping Maharashtra",
     "Quick commerce Tier 2 Tier 3 India",
+    "Online marketplace for local shops",
   ],
 });
+
+const customerFaqs = [
+  {
+    question: "How fast is delivery on FirstMartt?",
+    answer:
+      "Orders are fulfilled from real neighbourhood stores located within 2 to 4 km of your address. Deliveries typically arrive in 15 to 30 minutes.",
+  },
+  {
+    question: "What payment methods are supported?",
+    answer:
+      "FirstMartt supports Instant UPI (Google Pay, PhonePe, Paytm), Credit/Debit Cards, Net Banking, and Cash on Delivery (COD).",
+  },
+  {
+    question: "How does FirstMartt ensure genuine products?",
+    answer:
+      "All products are sourced directly from verified brick-and-mortar retail shops and authorized distributors in your city, ensuring 100% genuine products with transparent expiration dates.",
+  },
+];
 
 export default function ForCustomersPage() {
   const breadcrumbs = [
@@ -32,10 +54,10 @@ export default function ForCustomersPage() {
 
   return (
     <>
-      <JsonLd data={breadcrumbSchema(breadcrumbs)} />
+      <JsonLd data={[breadcrumbSchema(breadcrumbs), faqSchema(customerFaqs)]} />
       <PageHeader
-        title="For Customers"
-        description="Your neighborhood, digitized. Shop from your favorite trusted local stores across multiple categories and get lightning-fast delivery."
+        title="Shop Trusted Local Stores Online"
+        description="Your favourite neighbourhood shops, digitized. Order groceries, medicines, electronics, and fresh daily essentials with 15 to 30 minute delivery."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "For Customers" },
@@ -44,32 +66,36 @@ export default function ForCustomersPage() {
       <Prose>
         <MarkdownContent
           content={`
-FirstMartt brings the ease of digital shopping to your neighborhood. You no longer have to choose between supporting local family shops and the convenience of quick online delivery.
+FirstMartt brings the convenience of modern quick commerce to your trusted neighbourhood shops. You no longer have to compromise between supporting local family-run businesses and getting instant doorstep delivery.
 
-## Multi-Category Shopping Under One Roof
+## 🛒 Multi-Category Shopping from Real Local Shops
 
-With FirstMartt, you can purchase items from different neighborhood categories in a single digital session:
-- **Daily Essentials:** Kirana, fresh groceries, bakery items, dairy.
-- **Health & Wellness:** Fast pharmacy deliveries and personal care.
-- **Lifestyle & Home:** Fashion, books, sports gear, home essentials, and toys.
-- **Specialty Products:** Flowers, bakery goods, pet supplies, and automobile accessories.
+With FirstMartt, explore and order from multiple verified local stores in one simple platform:
+- **Groceries & Fresh Daily Essentials:** Fresh vegetables, fruits, dairy, bakery items, spices, and packaged food from top local Kiranas.
+- **Medicines & Health:** Fast prescription fulfillment and wellness care from licensed neighbourhood pharmacies.
+- **Electronics & Mobile Accessories:** Cables, chargers, adapters, and home electronics from trusted city retailers.
+- **Home, Lifestyle & Stationery:** School books, office stationery, hardware tools, and household cleaning supplies.
 
-## Speed Meet Trust
+---
 
-Why wait days for shipping or settle for dark-store quality? FirstMartt delivers items directly from merchants you know and trust:
-- **15-Minute Delivery:** Express delivery from nearby local stores.
-- **Genuine Products:** Verified inventory direct from local shop shelves.
-- **Flexible Ordering:** Shop online and pay securely with UPI, cards, or cash on delivery.
+## ⚡ Speed Meets Generational Trust
 
-## Support Your Neighborhood Economy
+Why wait days for long-distance couriers or settle for anonymous warehouse dark-store batches?
+- **15–30 Minute Doorstep Delivery:** Hyperlocal routing dispatches couriers immediately upon order confirmation.
+- **100% Genuine, Fresh Stock:** Real retail inventory verified on store shelves, eliminating stale or near-expiry batches.
+- **Flexible Payment Options:** Instant UPI, card payments, or Cash on Delivery (COD) for complete peace of mind.
 
-Every purchase made through FirstMartt helps a local retailer grow. Instead of displacing brick-and-mortar storefronts, our platform increases their sales, supports local jobs, and strengthens your local neighborhood community.
+---
+
+## 🤝 Strengthening Your Local Community Economy
+
+Every order placed on FirstMartt keeps 100% of retail earnings circulating within your local town and district economy. You empower local merchants, fund neighbourhood jobs, and sustain vibrant high-street retail ecosystems.
           `.trim()}
         />
       </Prose>
       <CTA 
-        title="Start Shopping Locally"
-        description="Discover the best local shops in your neighborhood. Join our mailing list for launch updates."
+        title="Experience Neighbourhood Quick Commerce"
+        description="Discover the top local stores in your neighbourhood. Get notified as FirstMartt rolls out in your area."
         primaryHref="/contact"
         primaryLabel="Get Launch Updates"
       />

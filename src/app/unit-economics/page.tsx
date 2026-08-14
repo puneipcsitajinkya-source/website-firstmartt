@@ -7,9 +7,9 @@ import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = createMetadata({
-  title: "Unit Economics | FirstMartt Hyperlocal Marketplace",
+  title: "Unit Economics & Contribution Margins | FirstMartt Hyperlocal Platform",
   description:
-    "Explore FirstMartt's unit economics — transaction revenue, customer acquisition cost, lifetime value, take rate, and path to profitability for our hyperlocal commerce platform.",
+    "Explore FirstMartt's unit economics — CM3 contribution margins, asset-light zero-dark-store architecture, take rate, CAC/LTV, and path to sustainable profitability.",
   path: "/unit-economics",
   keywords: [
     "Startup Unit Economics",
@@ -17,9 +17,12 @@ export const metadata: Metadata = createMetadata({
     "Indian Startup Profitability",
     "FirstMartt Unit Economics",
     "Marketplace Take Rate",
+    "Contribution margin quick commerce India",
+    "Dark store model vs local merchant network",
     "Customer Acquisition Cost India",
     "Unit economics of hyperlocal delivery",
     "Hyperlocal commerce business model",
+    "Quick commerce without dark stores",
   ],
 });
 
