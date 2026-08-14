@@ -27,6 +27,10 @@ export const locations: LocationEntry[] = [
       "Quick Commerce Maharashtra",
       "FirstMartt Maharashtra",
       "Local Commerce Startup Maharashtra",
+      "Hyperlocal ecommerce Maharashtra",
+      "Maharashtra retail tech startup",
+      "Hyperlocal shopping Maharashtra",
+      "Vidarbha startup ecosystem",
     ],
     headline: "Hyperlocal Commerce in Maharashtra",
     intro:
@@ -54,6 +58,9 @@ export const locations: LocationEntry[] = [
       "Quick Commerce Yavatmal",
       "FirstMartt Yavatmal",
       "Ecommerce Yavatmal Maharashtra",
+      "Local commerce startup Yavatmal",
+      "Vidarbha startup ecosystem",
+      "Tier 2 city commerce India",
     ],
     headline: "Yavatmal Pilot — Local Commerce, Digitised",
     intro:

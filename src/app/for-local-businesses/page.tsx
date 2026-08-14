@@ -18,6 +18,11 @@ export const metadata: Metadata = createMetadata({
     "Local Shop Merchant App",
     "Hyperlocal Seller Account India",
     "Grow Retail Business Digitally",
+    "Kirana store digital platform",
+    "Local merchant digitalization India",
+    "Online marketplace for local shops",
+    "Digitize local retail India",
+    "Neighbourhood store ecommerce",
   ],
 });
 

@@ -19,6 +19,10 @@ export const metadata: Metadata = createMetadata({
     "Tier 2 Tier 3 City Commerce India",
     "India Digital Payments UPI",
     "India Retail Market 2030",
+    "Tier 2 city commerce India",
+    "Tier 3 city retail digitization",
+    "Quick commerce Tier 2 Tier 3 India",
+    "Why Tier 2 and Tier 3 cities are the future of Indian ecommerce",
   ],
 });
 

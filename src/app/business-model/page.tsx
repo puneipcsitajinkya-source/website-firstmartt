@@ -17,6 +17,9 @@ export const metadata: Metadata = createMetadata({
     "SaaS for Local Retailers",
     "Startup Unit Economics India",
     "FirstMartt Business Model",
+    "FirstMartt business model",
+    "Hyperlocal commerce business model",
+    "Multi vendor marketplace vs single vendor",
   ],
 });
 

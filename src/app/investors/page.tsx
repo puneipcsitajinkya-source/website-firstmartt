@@ -20,6 +20,11 @@ export const metadata: Metadata = createMetadata({
     "FirstMartt Funding",
     "Invest in Indian Startups",
     "India Ecommerce Investment",
+    "Foreign Investment Indian Retail Tech",
+    "Invest in Indian Tech Startups",
+    "Indian Ecommerce Startup Investment",
+    "Hyperlocal Startup Investment",
+    "Indian Retail Technology Startup",
   ],
 });
 

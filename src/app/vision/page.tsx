@@ -12,7 +12,7 @@ export const metadata: Metadata = createMetadata({
   description:
     "FirstMartt's vision is to become India's leading hyperlocal commerce platform, empowering every local business to thrive in the digital economy.",
   path: "/vision",
-  keywords: ["Hyperlocal Commerce Startup", "Local Commerce Platform", "Digital Platform for Local Businesses"],
+  keywords: ["Hyperlocal Commerce Startup", "Local Commerce Platform", "Digital Platform for Local Businesses", "Future of hyperlocal commerce in India", "Neighbourhood store ecommerce", "Digitize local retail India"],
 });
 
 export default function VisionPage() {

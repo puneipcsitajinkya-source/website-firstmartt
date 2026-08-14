@@ -22,6 +22,9 @@ export const metadata: Metadata = createMetadata({
     "Foreign Investment Indian Retail Tech",
     "International Investor FAQ India",
     "India Startup Investment Guide",
+    "India Startup Investment Opportunity 2026",
+    "Invest in Indian Tech Startups",
+    "foreign investment Indian retail tech",
   ],
 });
 

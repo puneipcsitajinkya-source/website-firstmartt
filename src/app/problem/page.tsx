@@ -12,7 +12,7 @@ export const metadata: Metadata = createMetadata({
   description:
     "FirstMartt addresses the digital gap facing India's local businesses—lack of online presence, fragmented tools, and competition from large ecommerce platforms.",
   path: "/problem",
-  keywords: ["Local Business Marketplace", "Digital Transformation", "Hyperlocal Delivery Platform"],
+  keywords: ["Local Business Marketplace", "Digital Transformation", "Hyperlocal Delivery Platform", "How local merchants can sell online in India", "Online marketplace for local shops", "Kirana store digital platform"],
 });
 
 export default function ProblemPage() {

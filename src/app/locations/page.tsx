@@ -15,6 +15,11 @@ export const metadata: Metadata = createMetadata({
     "Hyperlocal Delivery India",
     "Startup in Maharashtra",
     "Quick Commerce Cities India",
+    "Hyperlocal ecommerce Maharashtra",
+    "Local commerce startup Yavatmal",
+    "Vidarbha startup ecosystem",
+    "Maharashtra retail tech startup",
+    "Hyperlocal shopping Maharashtra",
   ],
 });
 

@@ -18,6 +18,8 @@ export const metadata: Metadata = createMetadata({
     "FirstMartt Unit Economics",
     "Marketplace Take Rate",
     "Customer Acquisition Cost India",
+    "Unit economics of hyperlocal delivery",
+    "Hyperlocal commerce business model",
   ],
 });
 

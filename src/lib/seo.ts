@@ -51,6 +51,7 @@ export function createMetadata({
         "application/rss+xml": `${siteConfig.url}/feed.xml`,
       },
     },
+    category: "technology",
     openGraph: {
       type: ogType,
       locale: siteConfig.locale,
@@ -66,6 +67,7 @@ export function createMetadata({
       title: fullTitle,
       description,
       creator: siteConfig.social.twitter,
+      site: siteConfig.social.twitter,
     },
     robots: noIndex
       ? { index: false, follow: false }

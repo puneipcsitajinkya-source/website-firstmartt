@@ -12,7 +12,7 @@ export const metadata: Metadata = createMetadata({
   description:
     "FirstMartt's mission is to democratize digital commerce for local businesses in India through accessible technology and merchant-first marketplace design.",
   path: "/mission",
-  keywords: ["Business Growth Platform", "Local Business Digital Platform", "Merchant Marketplace"],
+  keywords: ["Business Growth Platform", "Local Business Digital Platform", "Merchant Marketplace", "Digitize local retail India", "Digital Platform for Local Businesses", "Local merchant digitalization India"],
 });
 
 export default function MissionPage() {

@@ -18,6 +18,10 @@ export const metadata: Metadata = createMetadata({
     "India Retail Market Research",
     "Local Merchant Digitization Study",
     "FirstMartt Research",
+    "Why Tier 2 and Tier 3 cities are the future of Indian ecommerce",
+    "AI in local retail supply chain India",
+    "Hyperlocal commerce business model",
+    "Unit economics of hyperlocal delivery",
   ],
 });
 

@@ -41,15 +41,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries: MetadataRoute.Sitemap = staticPages.map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),
-    changeFrequency: path === "" ? "weekly" : "monthly",
+    changeFrequency:
+      path === ""
+        ? "daily"
+        : path === "/blog" || path === "/research"
+          ? "weekly"
+          : path === "/investment" || path === "/global" || path === "/investors" || path === "/market"
+            ? "weekly"
+            : "monthly",
     priority:
       path === ""
         ? 1
         : path === "/investment" || path === "/blog" || path === "/global" || path === "/investors" || path === "/market"
-        ? 0.9
-        : path === "/locations" || path === "/traction" || path === "/unit-economics" || path === "/competitive-landscape" || path === "/investors/faq-international"
-        ? 0.85
-        : 0.8,
+          ? 0.9
+          : path === "/locations" || path === "/traction" || path === "/unit-economics" || path === "/competitive-landscape" || path === "/investors/faq-international" || path === "/research"
+            ? 0.85
+            : path === "/about" || path === "/solutions" || path === "/for-local-businesses" || path === "/business-model" || path === "/why-firstmartt"
+              ? 0.8
+              : 0.7,
   }));
 
   const blogEntries: MetadataRoute.Sitemap = getAllSlugs().map((slug) => {

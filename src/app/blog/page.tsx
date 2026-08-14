@@ -21,6 +21,11 @@ export const metadata: Metadata = createMetadata({
     "Local Merchant Digitalization",
     "Invest in Indian Startups",
     "Tier 2 Tier 3 Commerce",
+    "What is hyperlocal commerce",
+    "Future of hyperlocal commerce in India",
+    "Local merchant digitalization India",
+    "How local merchants can sell online in India",
+    "AI in local retail supply chain India",
   ],
 });
 

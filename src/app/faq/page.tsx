@@ -19,6 +19,10 @@ export const metadata: Metadata = createMetadata({
     "Hyperlocal Marketplace India",
     "Indian Startup Investment FAQ",
     "International Investor FAQ India",
+    "What is hyperlocal commerce",
+    "Hyperlocal commerce business model",
+    "FirstMartt ecommerce",
+    "FirstMartt app",
   ],
 });
 

@@ -19,6 +19,11 @@ export const metadata: Metadata = createMetadata({
     "Invest in Hyperlocal Startup India",
     "Indian Retail Technology Investment",
     "Pre-Seed Startup India",
+    "Foreign Investment Indian Retail Tech",
+    "NRI investment Indian startups",
+    "India Startup Investment Opportunity 2026",
+    "FDI India ecommerce",
+    "Invest in Indian Tech Startups",
   ],
 });
 

@@ -12,7 +12,7 @@ export const metadata: Metadata = createMetadata({
   description:
     "Learn about FirstMartt, an Indian hyperlocal commerce startup building a multi-vendor marketplace and digital platform for local businesses across India.",
   path: "/about",
-  keywords: ["Indian Startup", "Hyperlocal Marketplace India", "About FirstMartt"],
+  keywords: ["Indian Startup", "Hyperlocal Marketplace India", "About FirstMartt", "FirstMartt India", "FirstMartt startup", "FirstMartt founders", "FirstMartt Yavatmal", "Local Commerce Platform"],
 });
 
 export default function AboutPage() {

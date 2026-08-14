@@ -17,6 +17,9 @@ export const metadata: Metadata = createMetadata({
     "Retail Tech Milestones",
     "Startup Expansion Strategy India",
     "Pre-Seed Startup Roadmap",
+    "AI Commerce Startup India",
+    "Retail Technology Startup",
+    "Tier 2 city commerce India",
   ],
 });
 

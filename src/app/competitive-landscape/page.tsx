@@ -17,6 +17,8 @@ export const metadata: Metadata = createMetadata({
     "Indian Hyperlocal Startups",
     "FirstMartt vs Quick Commerce",
     "Hyperlocal Marketplace Comparison",
+    "Multi vendor marketplace vs single vendor",
+    "AI in local retail supply chain India",
   ],
 });
 

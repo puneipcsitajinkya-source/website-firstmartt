@@ -18,6 +18,9 @@ export const metadata: Metadata = createMetadata({
     "15-Minute Delivery India",
     "Hyperlocal Grocery Delivery",
     "FirstMartt Customers",
+    "Neighbourhood store ecommerce",
+    "Hyperlocal shopping Maharashtra",
+    "Quick commerce Tier 2 Tier 3 India",
   ],
 });
 

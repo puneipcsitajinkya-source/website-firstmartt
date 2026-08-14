@@ -18,6 +18,8 @@ export const metadata: Metadata = createMetadata({
     "Earn Money Delivery Boy",
     "Flexible Delivery Jobs",
     "FirstMartt Partners",
+    "Hyperlocal delivery platform India",
+    "Quick commerce Tier 2 Tier 3 India",
   ],
 });
 

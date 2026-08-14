@@ -12,7 +12,7 @@ export const metadata: Metadata = createMetadata({
   description:
     "Contact FirstMartt for investment inquiries, partnerships, merchant onboarding, careers, and general questions about our hyperlocal commerce platform.",
   path: "/contact",
-  keywords: ["Contact FirstMartt", "Startup for Investors", "FirstMartt India"],
+  keywords: ["Contact FirstMartt", "Startup for Investors", "FirstMartt India", "FirstMartt funding", "FirstMartt investment", "Startup Seeking Investment India"],
 });
 
 export default function ContactPage() {

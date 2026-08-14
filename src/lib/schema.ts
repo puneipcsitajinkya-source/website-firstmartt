@@ -15,19 +15,38 @@ export function organizationSchema() {
     telephone: contactPhone.e164,
     address: {
       "@type": "PostalAddress",
+      streetAddress: siteConfig.contact.address.streetAddress,
       addressLocality: siteConfig.contact.address.addressLocality,
       addressRegion: siteConfig.contact.address.addressRegion,
       addressCountry: siteConfig.contact.address.addressCountry,
+      postalCode: siteConfig.contact.address.postalCode,
     },
     sameAs: [siteConfig.social.linkedin],
     foundingLocation: {
       "@type": "Place",
-      name: "India",
+      name: "Yavatmal, Maharashtra, India",
     },
     areaServed: {
       "@type": "Country",
       name: "India",
     },
+    knowsAbout: [
+      "Hyperlocal Commerce",
+      "Local Business Digitalization",
+      "Multi Vendor Marketplace",
+      "AI Commerce",
+      "Retail Technology",
+      "Kirana Store Digital Platform",
+      "Quick Commerce India",
+      "Hyperlocal Delivery",
+      "Tier 2 Tier 3 City Ecommerce",
+      "MSME Merchant Digitization",
+    ],
+    numberOfEmployees: {
+      "@type": "QuantitativeValue",
+      value: "10-50",
+    },
+    naics: "454110",
   };
 }
 
@@ -43,6 +62,14 @@ export function websiteSchema() {
       "@type": "Organization",
       name: siteConfig.name,
       url: siteConfig.url,
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${siteConfig.url}/blog?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
     },
   };
 }

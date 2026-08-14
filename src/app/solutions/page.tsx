@@ -17,6 +17,11 @@ export const metadata: Metadata = createMetadata({
     "Local Store Marketplace",
     "Retail Technology",
     "Business Growth Platform",
+    "Hyperlocal delivery platform India",
+    "Multi Vendor Marketplace India",
+    "AI Commerce Startup India",
+    "Kirana store digital platform",
+    "Online marketplace for local shops",
   ],
 });
 

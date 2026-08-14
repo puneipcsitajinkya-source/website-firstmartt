@@ -18,6 +18,9 @@ export const metadata: Metadata = createMetadata({
     "Remote Engineering Roles",
     "Product Manager Startup India",
     "Join FirstMartt Team",
+    "FirstMartt India",
+    "AI Commerce Startup India",
+    "Retail Technology Startup",
   ],
 });
 

@@ -18,6 +18,10 @@ export const metadata: Metadata = createMetadata({
     "Merchant First Platform",
     "Digital Platform for Local Businesses",
     "Retail Technology Startup India",
+    "AI Commerce Startup India",
+    "Local merchant digitalization India",
+    "Kirana store digital platform",
+    "Future of hyperlocal commerce in India",
   ],
 });
 

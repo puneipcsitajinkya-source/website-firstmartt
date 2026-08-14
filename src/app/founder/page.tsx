@@ -12,7 +12,7 @@ export const metadata: Metadata = createMetadata({
   description:
     "Meet the founders behind FirstMartt, an Indian hyperlocal commerce startup building a digital platform for local businesses and seeking investment.",
   path: "/founder",
-  keywords: ["Indian Startup", "Entrepreneurship India", "FirstMartt Founder"],
+  keywords: ["Indian Startup", "Entrepreneurship India", "FirstMartt Founder", "FirstMartt founders", "FirstMartt Yavatmal", "FirstMartt startup", "Local commerce startup Yavatmal"],
 });
 
 export default function FounderPage() {

@@ -14,6 +14,21 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/api/"],
       },
+      {
+        userAgent: "Bingbot",
+        allow: "/",
+        disallow: ["/api/"],
+      },
+      {
+        userAgent: "DuckDuckBot",
+        allow: "/",
+        disallow: ["/api/"],
+      },
+      {
+        userAgent: "Slurp",
+        allow: "/",
+        disallow: ["/api/"],
+      },
     ],
     sitemap: `${siteConfig.url}/sitemap.xml`,
     host: siteConfig.url,

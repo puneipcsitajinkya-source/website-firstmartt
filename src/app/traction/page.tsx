@@ -18,6 +18,9 @@ export const metadata: Metadata = createMetadata({
     "Hyperlocal Startup Traction India",
     "Indian Startup Metrics",
     "FirstMartt Growth",
+    "FirstMartt India",
+    "Hyperlocal Commerce Startup",
+    "Retail Technology Startup",
   ],
 });
 
