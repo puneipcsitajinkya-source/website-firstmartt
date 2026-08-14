@@ -47,7 +47,7 @@ const stats = [
 
 const blogPosts = [
   {
-    slug: "future-of-hyperlocal-commerce-india",
+    slug: "future-of-hyperlocal-commerce-india-2026-outlook",
     title: "The Future of Hyperlocal Commerce in India",
   },
   {

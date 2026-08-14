@@ -22,8 +22,7 @@ export function Stagger({ children, className = "", as = "div" }: StaggerProps) 
     <Component
       className={className}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-40px" }}
+      animate="visible"
       variants={staggerContainer}
     >
       {children}

@@ -9,8 +9,12 @@ import type { BlogPost } from "@/lib/blog";
 export function BlogPostGrid({ posts }: { posts: BlogPost[] }) {
   const prefersReducedMotion = useReducedMotion();
 
+  // Use a key derived from the post slugs to force re-mount when posts change
+  // This ensures Framer Motion animations re-trigger on client-side navigation
+  const gridKey = posts.map((p) => p.slug).join(",");
+
   return (
-    <Stagger className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <Stagger key={gridKey} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {posts.map((post) => (
         <StaggerItem key={post.slug} as="article">
           <motion.article

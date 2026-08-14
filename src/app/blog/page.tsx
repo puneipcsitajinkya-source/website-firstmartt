@@ -10,9 +10,9 @@ import { getAllPosts, blogCategories } from "@/lib/blog";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = createMetadata({
-  title: "Blog & Knowledge Hub: 100+ Guides on Hyperlocal Commerce",
+  title: "Blog & Knowledge Hub: 1,150+ Comprehensive Guides on Hyperlocal Commerce",
   description:
-    "FirstMartt's comprehensive library of 100+ authoritative articles on hyperlocal commerce, merchant digitalization, startup investing in India, and retail tech.",
+    "FirstMartt's authoritative library of 1,150+ in-depth guides, city playbooks, merchant digitalization blueprints, startup investing memos, and retail technology research.",
   path: "/blog",
   keywords: [
     "Hyperlocal Commerce",
@@ -26,6 +26,10 @@ export const metadata: Metadata = createMetadata({
     "Local merchant digitalization India",
     "How local merchants can sell online in India",
     "AI in local retail supply chain India",
+    "City Hyperlocal Delivery Guides",
+    "Retail POS and Inventory Automation",
+    "ONDC Network Protocols",
+    "EV Rider Logistics India",
   ],
 });
 
@@ -36,7 +40,7 @@ type Props = {
 export default async function BlogPage({ searchParams }: Props) {
   const { q = "", category = "All", page = "1" } = await searchParams;
   const currentPage = parseInt(page, 10) || 1;
-  const postsPerPage = 9;
+  const postsPerPage = 12;
 
   let posts = getAllPosts();
 
@@ -74,8 +78,8 @@ export default async function BlogPage({ searchParams }: Props) {
     <>
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />
       <PageHeader
-        title="Hyperlocal Commerce & Retail Hub"
-        description="Explore 100+ in-depth guides, operational playbooks, and investor intelligence on local commerce, merchant digitalization, and retail technology in India."
+        title="Hyperlocal Commerce & Retail Knowledge Hub"
+        description="Explore 1,150+ in-depth guides, operational playbooks, city blueprints, and investor research on local commerce, merchant digitalization, and retail technology in India."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Blog" }]}
       />
 
@@ -92,7 +96,7 @@ export default async function BlogPage({ searchParams }: Props) {
                 type="text"
                 name="q"
                 defaultValue={q}
-                placeholder="Search across 100+ articles (e.g. Kirana, Investor, Yavatmal, AI, ONDC)..."
+                placeholder="Search across 1,150+ articles (e.g. Kirana, Investor, Yavatmal, Pune, AI, ONDC, Pharmacy)..."
                 className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 focus:border-violet-600 focus:outline-none focus:ring-2 focus:ring-violet-600/20"
               />
             </div>
@@ -184,7 +188,7 @@ export default async function BlogPage({ searchParams }: Props) {
                   </p>
                 </div>
 
-                <div className="flex items-center gap-1.5">
+                <div className="flex items-center gap-1.5 flex-wrap">
                   {validPage > 1 && (
                     <Link
                       href={`/blog?page=${validPage - 1}${
@@ -192,13 +196,13 @@ export default async function BlogPage({ searchParams }: Props) {
                           ? `&category=${encodeURIComponent(category)}`
                           : ""
                       }${q ? `&q=${encodeURIComponent(q)}` : ""}`}
-                      className="rounded-lg border border-slate-300 bg-white px-3.5 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50"
+                      className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50"
                     >
-                      ← Previous
+                      ← Prev
                     </Link>
                   )}
 
-                  {/* Page numbers */}
+                  {/* Page numbers with smart windowing */}
                   {Array.from({ length: totalPages }, (_, i) => i + 1)
                     .filter((p) => {
                       return (
@@ -214,7 +218,7 @@ export default async function BlogPage({ searchParams }: Props) {
                       return (
                         <span key={p} className="flex items-center">
                           {showEllipsis && (
-                            <span className="px-2 text-xs text-slate-400">...</span>
+                            <span className="px-1 text-xs text-slate-400">...</span>
                           )}
                           <Link
                             href={`/blog?page=${p}${
@@ -241,7 +245,7 @@ export default async function BlogPage({ searchParams }: Props) {
                           ? `&category=${encodeURIComponent(category)}`
                           : ""
                       }${q ? `&q=${encodeURIComponent(q)}` : ""}`}
-                      className="rounded-lg border border-slate-300 bg-white px-3.5 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50"
+                      className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50"
                     >
                       Next →
                     </Link>
@@ -257,13 +261,13 @@ export default async function BlogPage({ searchParams }: Props) {
               {category !== "All" ? `in ${category}` : ""}.
             </p>
             <p className="mt-1 text-xs text-slate-500">
-              Try searching for &quot;kirana&quot;, &quot;investor&quot;, &quot;Maharashtra&quot;, or &quot;AI&quot;.
+              Try searching for &quot;kirana&quot;, &quot;investor&quot;, &quot;Pune&quot;, &quot;Yavatmal&quot;, or &quot;AI&quot;.
             </p>
             <Link
               href="/blog"
               className="mt-5 inline-block rounded-xl bg-violet-600 px-5 py-2.5 text-xs font-bold text-white shadow-sm hover:bg-violet-700"
             >
-              Clear filters and view all 100+ articles
+              Clear filters and view all articles
             </Link>
           </div>
         )}

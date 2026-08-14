@@ -6,14 +6,41 @@ import { merchantAndKiranaPosts } from "./blog-data/merchant-and-kirana";
 import { investmentAndStartupPosts } from "./blog-data/investment-and-startup";
 import { regionalAndBharatPosts } from "./blog-data/regional-and-bharat";
 import { technologyAndLogisticsPosts } from "./blog-data/technology-and-logistics";
+import { cityHyperlocalPosts } from "./blog-data/city-hyperlocal-playbooks";
+import { retailCategoryPosts } from "./blog-data/retail-category-guides";
+import { generateProgrammaticPosts } from "./blog-data/programmatic-seo-engine";
+import { seoMastery100Posts } from "./blog-data/seo-mastery-100";
+import { seoMasteryVolume2Posts } from "./blog-data/seo-mastery-volume-2";
+import { indianStartupAndInvestment100Posts } from "./blog-data/indian-startup-and-investment-100";
+import { indianStartupAndInvestmentVolume2Posts } from "./blog-data/indian-startup-and-investment-volume-2";
 
-export const blogPosts: BlogPost[] = [
+// Master Blog Posts collection
+const programmaticArticles = generateProgrammaticPosts();
+
+// Deduplicate by slug to ensure 100% uniqueness
+const rawBlogPosts: BlogPost[] = [
   ...marketAndHyperlocalPosts,
   ...merchantAndKiranaPosts,
   ...investmentAndStartupPosts,
   ...regionalAndBharatPosts,
   ...technologyAndLogisticsPosts,
+  ...cityHyperlocalPosts,
+  ...retailCategoryPosts,
+  ...seoMastery100Posts,
+  ...seoMasteryVolume2Posts,
+  ...indianStartupAndInvestment100Posts,
+  ...indianStartupAndInvestmentVolume2Posts,
+  ...programmaticArticles,
 ];
+
+const postMap = new Map<string, BlogPost>();
+for (const post of rawBlogPosts) {
+  if (!postMap.has(post.slug)) {
+    postMap.set(post.slug, post);
+  }
+}
+
+export const blogPosts: BlogPost[] = Array.from(postMap.values());
 
 export const blogCategories = [
   "All",
@@ -22,6 +49,11 @@ export const blogCategories = [
   "Investor & Funding",
   "Regional Bharat",
   "Retail Tech & AI",
+  "City Playbooks",
+  "Retail Categories",
+  "Gig Economy & Fleet",
+  "ONDC & Policy",
+  "Consumer Guides",
 ] as const;
 
 export function getAllPosts(): BlogPost[] {
@@ -31,11 +63,11 @@ export function getAllPosts(): BlogPost[] {
 }
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
-  return blogPosts.find((post) => post.slug === slug);
+  return postMap.get(slug);
 }
 
 export function getAllSlugs(): string[] {
-  return blogPosts.map((post) => post.slug);
+  return Array.from(postMap.keys());
 }
 
 export function getPostsByCategory(category: string): BlogPost[] {
@@ -45,4 +77,10 @@ export function getPostsByCategory(category: string): BlogPost[] {
   return getAllPosts().filter(
     (post) => post.category.toLowerCase() === category.toLowerCase()
   );
+}
+
+export function getRelatedPosts(currentSlug: string, category: string, limit = 3): BlogPost[] {
+  return getAllPosts()
+    .filter((post) => post.slug !== currentSlug && post.category.toLowerCase() === category.toLowerCase())
+    .slice(0, limit);
 }
