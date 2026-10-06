@@ -129,9 +129,9 @@ FirstMartt’s vision pipeline transforms this into a 5-second action:
 - Multi-modal vision models recognize the packaging, brand, variant, and MRP.
 - The item is automatically mapped to our pre-verified national master catalog, complete with high-resolution imagery, regional language titles, and dietary tags.
 
-```
+\`\`\`
 [Smartphone Camera] ──► [Edge OCR / Barcode] ──► [Vision Model Matching] ──► [Live Product in 5s]
-```
+\`\`\`
 
 ### 2. Hyper-Localized Predictive Demand Forecasting
 In retail, inventory is capital. Understocking leads to lost sales and disappointed neighbors; overstocking perishable goods leads to financial spoilage.
@@ -385,7 +385,7 @@ Many local retailers operate on mid-range Android devices with intermittent 4G/5
 
 ## Operational Flow: From Click to Handover
 
-```
+\`\`\`
 [Consumer Order] 
        │
        ▼
@@ -396,7 +396,7 @@ Many local retailers operate on mid-range Android devices with intermittent 4G/5
                                       │
                                       ▼
                  [Real-time Doorstep Delivery < 30 Min]
-```
+\`\`\`
 
 ---
 
