@@ -33,6 +33,7 @@ const staticPages = [
   "/blog",
   "/research",
   "/locations",
+  "/invest-in-startup-india",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -48,13 +49,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ? "daily"
         : path === "/blog" || path === "/research" || path === "/locations"
           ? "daily"
-          : path === "/investment" || path === "/global" || path === "/investors" || path === "/market"
+          : path === "/investment" || path === "/global" || path === "/investors" || path === "/market" || path === "/invest-in-startup-india"
             ? "weekly"
             : "monthly",
     priority:
       path === ""
         ? 1.0
-        : path === "/investment" || path === "/blog" || path === "/global" || path === "/investors" || path === "/market"
+        : path === "/investment" || path === "/blog" || path === "/global" || path === "/investors" || path === "/market" || path === "/invest-in-startup-india"
           ? 0.95
           : path === "/locations" || path === "/traction" || path === "/unit-economics" || path === "/competitive-landscape" || path === "/investors/faq-international" || path === "/research"
             ? 0.9

@@ -7,6 +7,7 @@ import { createMetadata } from "@/lib/seo";
 import { breadcrumbSchema, webPageSchema, faqSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 import { contactPhone } from "@/lib/contact";
+import { IndianInvestorSuite } from "@/components/investors/IndianInvestorSuite";
 
 export const metadata: Metadata = createMetadata({
   title: "FirstMartt Investment Opportunity | Pre-Seed Retail Tech Startup India",
@@ -393,6 +394,11 @@ export default function InvestmentPage() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Interactive Pre-Seed Investment Suite */}
+      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
+        <IndianInvestorSuite />
       </section>
 
       <CTA

@@ -30,6 +30,12 @@ export const metadata: Metadata = createMetadata({
 
 const investorLinks = [
   {
+    href: "/invest-in-startup-india",
+    icon: "🇮🇳",
+    title: "Invest in Startup India (Pre-Seed ₹50L)",
+    description: "Interactive ROI calculator, quick commerce comparison, ₹50L deployment plan, and angel tax exemption.",
+  },
+  {
     href: "/investment",
     icon: "💼",
     title: "Investment Opportunity",
@@ -108,23 +114,36 @@ export default function InvestorsPage() {
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-2">
           {/* Indian Investors */}
-          <div className="premium-card rounded-2xl p-8 border-l-4 border-l-violet-500">
-            <span className="premium-eyebrow">🇮🇳 For Indian Investors</span>
+          <div className="premium-card rounded-2xl p-8 border-l-4 border-l-violet-500 bg-gradient-to-br from-violet-50/50 to-white">
+            <div className="flex items-center justify-between">
+              <span className="premium-eyebrow">🇮🇳 For Indian Investors</span>
+              <span className="rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-bold text-emerald-800">
+                ₹50L Pre-Seed Open
+              </span>
+            </div>
             <h2 className="font-display mt-4 text-2xl font-bold text-slate-900">
               Indian Angel Investors, VCs & Family Offices
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-slate-600">
               FirstMartt is building from Yavatmal, Maharashtra — ground-up. We understand India&apos;s local retail
-              ecosystem, MSME dynamics, and Tier-2/Tier-3 city economics. Our traction, business model, and market
-              data are presented with India-specific context and benchmarks.
+              ecosystem, MSME dynamics, and Tier-2/Tier-3 city economics. 100% DPIIT Angel Tax exempt (Sec 56(2)(viib)),
+              zero dark store capex, and positive CM3 economics.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="/investment" className="btn-primary px-4 py-2 text-sm">
-                Investment Details
+              <Link href="/invest-in-startup-india" className="btn-primary px-4 py-2 text-sm shadow-md shadow-violet-500/20">
+                🧮 Interactive Pre-Seed Calculator →
               </Link>
-              <Link href="/faq" className="btn-secondary px-4 py-2 text-sm">
-                Investor FAQ
+              <Link href="/investment" className="btn-secondary px-4 py-2 text-sm">
+                Investment Memo
               </Link>
+              <a
+                href="https://wa.me/918261807358?text=Hello%20Ajinkya,%20I%20am%20an%20investor%20exploring%20FirstMartt's%20pre-seed%20round.%20Let's%20connect."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-300 bg-emerald-50 px-3 py-2 text-sm font-semibold text-emerald-800 hover:bg-emerald-100 transition"
+              >
+                <span>💬 WhatsApp Founder</span>
+              </a>
             </div>
           </div>
 

@@ -246,4 +246,77 @@ export function webPageSchema(page: {
   };
 }
 
+/**
+ * Custom structured data for startup investment opportunity pages.
+ * Uses schema.org InvestmentOrLoan + Offer combination for maximum
+ * Google rich result eligibility on investor-related queries.
+ */
+export function investmentOfferingSchema(details?: {
+  name?: string;
+  description?: string;
+  amount?: string;
+  currency?: string;
+  stage?: string;
+  path?: string;
+}) {
+  const d = {
+    name: details?.name ?? "FirstMartt Pre-Seed Investment Opportunity",
+    description:
+      details?.description ??
+      "Pre-seed investment in India's hyperlocal commerce platform connecting neighbourhood retailers with customers through 15-minute delivery.",
+    amount: details?.amount ?? "5000000",
+    currency: details?.currency ?? "INR",
+    stage: details?.stage ?? "Pre-Seed",
+    path: details?.path ?? "/invest-in-startup-india",
+  };
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: d.name,
+    description: d.description,
+    url: `${siteConfig.url}${d.path}`,
+    about: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+      description: siteConfig.description,
+      foundingLocation: {
+        "@type": "Place",
+        name: "Yavatmal, Maharashtra, India",
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "India",
+      },
+      knowsAbout: [
+        "Hyperlocal Commerce",
+        "Retail Technology",
+        "Kirana Store Digitization",
+        "Multi Vendor Marketplace",
+        "Quick Commerce Without Dark Stores",
+        "MSME Retail Digitization India",
+        "AI Commerce India",
+      ],
+    },
+    mentions: [
+      {
+        "@type": "MonetaryAmount",
+        currency: d.currency,
+        value: d.amount,
+        name: `${d.stage} Funding Round`,
+      },
+    ],
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteConfig.url}/logo.png`,
+      },
+    },
+    inLanguage: siteConfig.language,
+  };
+}
 

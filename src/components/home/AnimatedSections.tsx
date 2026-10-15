@@ -151,38 +151,79 @@ export function InvestmentSection() {
     <section className="premium-mesh border-y border-violet-100/80 bg-gradient-to-b from-violet-50/40 via-white to-white py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <FadeIn direction="up">
+          <div className="inline-flex items-center gap-2 rounded-full border border-violet-300 bg-violet-100/80 px-4 py-1.5 text-xs font-semibold text-violet-800 shadow-sm backdrop-blur mb-6">
+            <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span>🇮🇳 Pre-Seed Round Open: ₹50 Lakhs ($60,000 USD)</span>
+          </div>
+
           <SectionHeader
-            eyebrow="Investors"
-            title="Startup Seeking Funding in India"
-            description="We are actively engaging with angel investors, venture capital firms, startup incubators, and accelerators. FirstMartt offers a compelling startup investment opportunity in the fast-growing hyperlocal commerce sector."
+            eyebrow="Indian & Global Investors"
+            title="Invest in India's Hyperlocal Commerce Revolution"
+            description="FirstMartt is raising ₹50 lakh in pre-seed funding to digitize neighbourhood retail across Maharashtra and India. Zero dark store capex, positive CM3 economics, and 100% DPIIT Angel Tax exemption."
           />
 
+          {/* Quick Metrics Bar for Indian Angels */}
+          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 max-w-4xl">
+            <div className="rounded-xl border border-violet-100 bg-white p-4 shadow-sm text-center">
+              <span className="text-xs text-slate-500">Raise Amount</span>
+              <p className="font-display text-2xl font-bold text-violet-700">₹50 Lakh</p>
+              <span className="text-[11px] text-emerald-600 font-semibold">Pre-Seed Tranche</span>
+            </div>
+            <div className="rounded-xl border border-violet-100 bg-white p-4 shadow-sm text-center">
+              <span className="text-xs text-slate-500">Angel Tax Status</span>
+              <p className="font-display text-2xl font-bold text-slate-900">0% Tax</p>
+              <span className="text-[11px] text-violet-600 font-medium">Sec 56(2)(viib) Exempt</span>
+            </div>
+            <div className="rounded-xl border border-violet-100 bg-white p-4 shadow-sm text-center">
+              <span className="text-xs text-slate-500">Dark Store Capex</span>
+              <p className="font-display text-2xl font-bold text-emerald-600">₹0 Capex</p>
+              <span className="text-[11px] text-slate-500">Merchant Mesh Model</span>
+            </div>
+            <div className="rounded-xl border border-violet-100 bg-white p-4 shadow-sm text-center">
+              <span className="text-xs text-slate-500">Retail TAM</span>
+              <p className="font-display text-2xl font-bold text-slate-900">$1.3T+</p>
+              <span className="text-[11px] text-slate-500">60M+ Kirana Stores</span>
+            </div>
+          </div>
+
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <Link href="/contact" className="btn-primary">
-              Get in Touch
+            <Link
+              href="/invest-in-startup-india"
+              className="btn-primary shadow-lg shadow-violet-500/25 px-6 py-3"
+            >
+              🧮 Interactive Pre-Seed Calculator & Returns →
             </Link>
             <Link
               href="/investment"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-violet-700 transition hover:gap-3 hover:text-violet-800"
+              className="btn-secondary px-5 py-3"
             >
-              Learn about our investment opportunity
-              <span aria-hidden="true">→</span>
+              Read Investment Thesis
             </Link>
+            <a
+              href="https://wa.me/918261807358?text=Hello%20Ajinkya,%20I%20am%20an%20investor%20interested%20in%20FirstMartt's%20pre-seed%20round.%20Let's%20connect."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl border border-emerald-300 bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-800 hover:bg-emerald-100 transition"
+            >
+              <span>💬 WhatsApp Founder</span>
+            </a>
           </div>
 
-          <AnimatedCard className="premium-card mt-10 max-w-3xl rounded-2xl p-8 sm:p-10">
+          <AnimatedCard className="premium-card mt-10 max-w-4xl rounded-2xl p-8 sm:p-10">
             <h3 className="font-display text-xl font-semibold text-slate-900">
-              Why Invest in FirstMartt?
+              Why Indian Angels & HNIs Are Backing FirstMartt:
             </h3>
             <ul className="mt-6 grid gap-4 sm:grid-cols-2">
               {[
-                "Large addressable market in Indian local retail",
-                "Scalable multi-vendor marketplace model",
-                "AI-driven commerce technology stack",
-                "Merchant-first approach with strong unit economics potential",
+                "Ground-floor pre-seed entry at accessible ₹2.5L to ₹25L ticket sizes",
+                "100% Angel Tax exempt under Section 56(2)(viib) for DPIIT registered startups",
+                "Zero dark-store burn — merchants hold inventory and supply shelves",
+                "Maharashtra pilot launch with deep Tier-2 and Tier-3 Bharat market moats",
+                "Positive Contribution Margin 3 (CM3) unit economics from first delivery",
+                "Standard i-SAFE / CCPS convertible agreement with clean rollover",
               ].map((item) => (
-                <li key={item} className="flex gap-3 text-slate-600">
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100 text-xs font-bold text-violet-700">
+                <li key={item} className="flex gap-3 text-slate-700 text-sm">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-xs font-bold text-emerald-700">
                     ✓
                   </span>
                   {item}

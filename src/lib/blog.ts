@@ -18,6 +18,7 @@ import { offlineToOnlinePart2Posts } from "./blog-data/offline-to-online-part2";
 import { merchantOnboardingGuidePosts } from "./blog-data/merchant-onboarding-guides";
 import { locationSEOPosts } from "./blog-data/location-seo-articles";
 import { industryAuthorityPosts } from "./blog-data/industry-authority-articles";
+import { investInStartupIndiaAbroadPosts } from "./blog-data/invest-in-startup-india-abroad";
 
 // Master Blog Posts collection
 const programmaticArticles = generateProgrammaticPosts();
@@ -40,6 +41,7 @@ const rawBlogPosts: BlogPost[] = [
   ...indianStartupAndInvestmentVolume2Posts,
   ...offlineToOnlinePart1Posts,
   ...offlineToOnlinePart2Posts,
+  ...investInStartupIndiaAbroadPosts,
   ...programmaticArticles,
 ];
 
